@@ -25,7 +25,7 @@ app.get('/heroes/detalle/:id', function (req, res) {
 
 app.get('/heroes/bio/:id/:ok', function (req, res) {
     if (array_heroes.includes(array_heroes[req.params.id - 1])) {
-        if (req.params.ok != 'ok'){
+        if (req.params.ok != 'ok') {
             res.send('Lamento que no desees saber más de mi :(');
         } else {
             let heroe = array_heroes[req.params.id - 1];
@@ -39,8 +39,7 @@ app.get('/heroes/bio/:id/:ok', function (req, res) {
 
 app.get('/creditos', (req, res) => {
     let creditos = `Director: Carlos Jaurechi<br>
-    Producción: Carlos Jaurechi<br>
-    Aguatero: Carlos Jaurechi`
+    Producción: Carlos Jaurechi<br>`
     res.send(creditos);
 });
 
